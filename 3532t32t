@@ -1,0 +1,83 @@
+import time
+import pydirectinput
+
+
+# queue (1000,670)
+# Quit after game over, coords (960,570)
+# experience continue(960,900)
+# Rewards earned(960,900) (triplaklikkaa), eka kerran, että galactic aukee, sitten 5s jälkeen toisen kerran
+# ja 5s vielä kolmannen kerran, että
+# rankki continue(960,950)
+
+def start():
+    pydirectinput.moveTo(960, 570)
+    time.sleep(3)
+    pydirectinput.doubleClick(960, 570, button='left')
+    repeat()
+
+
+def repeat():
+    for i in range(50000000):
+        time.sleep(20)
+        pydirectinput.moveTo(1000, 1050)
+        time.sleep(1)
+        pydirectinput.doubleClick(960, 800, button='left')
+        time.sleep(1)
+        pydirectinput.doubleClick(950, 800, button='left')
+        time.sleep(1)
+        pydirectinput.doubleClick(930, 800, button='left')
+        time.sleep(1)
+        pydirectinput.doubleClick(960, 800, button='left')
+        time.sleep(1)
+        pydirectinput.doubleClick(950, 800, button='left')
+        time.sleep(1)
+        pydirectinput.doubleClick(970, 800, button='left')
+        time.sleep(1)
+        pydirectinput.doubleClick(960, 800, button='left')
+        time.sleep(2)
+        pydirectinput.moveTo(950, 540)  # quit button
+        time.sleep(2)
+        pydirectinput.doubleClick(950, 540, button='left') # press the quit button twice
+        time.sleep(15)
+        pydirectinput.moveTo(950, 715)  # exp
+        time.sleep(3)
+        pydirectinput.doubleClick(950, 715, button='left')  # exp
+        pydirectinput.doubleClick(950, 715, button='left')  # EXTRA, ADDED FOR CARDS
+        pydirectinput.doubleClick(950, 715, button='left')  # EXTRA, ADDED FOR CARDS
+        pydirectinput.doubleClick(950, 715, button='left')  # EXTRA, ADDED FOR CARDS
+        pydirectinput.doubleClick(950, 715, button='left')  # EXTRA, ADDED FOR CARDS
+        time.sleep(4)
+        pydirectinput.moveTo(950, 700)  # rewards
+        time.sleep(4)
+        pydirectinput.doubleClick(950, 700, button='left')  # REWARDS
+        pydirectinput.doubleClick(950, 700, button='left')  # EXTRA, ADDED FOR CARDS
+        pydirectinput.doubleClick(950, 700, button='left')  # EXTRA ADDED FOR CARDS
+        time.sleep(4)
+        pydirectinput.doubleClick(950, 700, button='left')  # 2.klikkaus rewards
+        pydirectinput.doubleClick(950, 700, button='left')  # EXTRA ADDED FOR CARDS
+        pydirectinput.doubleClick(950, 700, button='left')  # EXTRA ADDED FOR CARDS
+        time.sleep(4)
+        pydirectinput.doubleClick(950, 700, button='left')  # 3.klikkaus rewards
+        pydirectinput.doubleClick(950, 700, button='left')  # EXTRA ADDED FOR CARDS
+        pydirectinput.doubleClick(950, 700, button='left')  # EXTRA ADDED FOR CARDS
+        time.sleep(4)
+        pydirectinput.moveTo(960, 950)  # Rank
+        time.sleep(4)
+        pydirectinput.doubleClick(960, 950, button='left')  # RANK
+        pydirectinput.doubleClick(960, 950, button='left')  # EXTRA
+        pydirectinput.doubleClick(960, 950, button='left')  # EXTRA
+        time.sleep(4)
+        pydirectinput.moveTo(950, 800)  # deny gather flux ikkuna
+        time.sleep(2)
+        pydirectinput.doubleClick(950, 800, button='left')  # deny gather flux ikkuna
+        time.sleep(3)
+        pydirectinput.moveTo(960, 570)  # UUSI QUEUE
+        time.sleep(3)
+        pydirectinput.click(960, 570, button='left')  # UUSI QUEUE
+
+
+def main():
+    time.sleep(2)
+    start()
+
+main()
